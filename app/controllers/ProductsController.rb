@@ -4,9 +4,11 @@ class ProductsController < ApplicationController
   end
 
   def show 
+    
   end 
 
   def new  
+    @products = Product.new
   end
 
   def create
@@ -17,7 +19,7 @@ class ProductsController < ApplicationController
 
   def update
   end
-  
+
   def destroy
   end
 end
