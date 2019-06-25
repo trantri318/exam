@@ -10,39 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_010831) do
+ActiveRecord::Schema.define(version: 2019_06_25_011433) do
 
-  create_table "hang", id: false, force: :cascade do |t|
-    t.string "tenhang"
+  create_table "categories_products", force: :cascade do |t|
   end
 
-  create_table "hedieuhanh", id: false, force: :cascade do |t|
-    t.string "ten"
-    t.string "hdh"
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal "price", precision: 6, scale: 2
+    t.boolean "published"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
-
-  create_table "hocphi", id: false, force: :cascade do |t|
-    t.string "ten", limit: 20
-    t.integer "tien"
-  end
-
-# Could not dump table "lap" because of following StandardError
-#   Unknown type '' for column 'name'
-
-  create_table "phone", id: false, force: :cascade do |t|
-    t.string "ten"
-    t.integer "price"
-    t.integer "id"
-  end
-
-# Could not dump table "products" because of following StandardError
-#   Unknown type '' for column 'title'
-
-  create_table "user", id: false, force: :cascade do |t|
-    t.integer "mssv", null: false
-  end
-
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'varcha(20)' for column 'ten'
 
 end
