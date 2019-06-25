@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 2019_06_25_011905) do
   create_table "categories_products", force: :cascade do |t|
   end
 
+# Could not dump table "category" because of following StandardError
+#   Unknown type 'string' for column 'title'
+
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.text "description"
