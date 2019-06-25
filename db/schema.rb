@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_080551) do
+ActiveRecord::Schema.define(version: 2019_06_25_010508) do
 
   create_table "hang", id: false, force: :cascade do |t|
     t.string "tenhang"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_080551) do
   end
 
 # Could not dump table "products" because of following StandardError
-#   Unknown type 'string' for column 'title'
+#   Unknown type '' for column 'title'
 
   create_table "user", id: false, force: :cascade do |t|
     t.integer "mssv", null: false
